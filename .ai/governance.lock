@@ -1,0 +1,86 @@
+{
+  "authority": {
+    "authorized": [
+      "EVALUATE",
+      "ALLOW",
+      "DENY",
+      "REQUIRE_APPROVAL"
+    ],
+    "forbidden": [
+      "LLM_AUTHORITATIVE_ALLOW",
+      "EXECUTE"
+    ]
+  },
+  "canonical_repository": "JankoD84/setvane-ecosystem-governance",
+  "canonical_revision": "4218a374acf2845b6a2ca89e46d0b11c9266bdee",
+  "disclosure": {
+    "public_mode": true,
+    "secrets_allowed": false
+  },
+  "entrypoint": "AGENTS.md",
+  "governance_version": "v1",
+  "product": "setvane",
+  "profile": "gate",
+  "projection": {
+    "files": {
+      ".agents/skills/README.md": "87ac4e3464b4960eca3a930d5348bdc313a3314d06b53069e9490f0a0eea2cae",
+      ".ai/process/implementation.md": "bd37745cfb38afd2e2f6410f58e6eb4a47147f1b23ce5b64282f1104c98c4abf",
+      ".ai/process/review.md": "8ec37d7178649dee12ab0f2770aec01779f41c5af5530303145af83bab9f6e89",
+      ".ai/repo/authority.md": "90c905377008b92fd5a0a295bd5f8e49396be18d7657b49ff821d2d6a2accf23",
+      ".ai/repo/development.md": "eae4e352d8922e114febf47da4a786c760c71b9e7070f87a86f63a3cf905b7a2",
+      ".ai/repo/identity.md": "5cc11e57afca741a44e462af2cd3ec403289f8af53b62daa6effa459dcf15ca0",
+      ".ai/repo/security.md": "e261aee6ddc51cdd8d050ab1f549a8bcbdf8e1aa04037bd44d646c28e7e3c655",
+      ".github/workflows/governance-validation.yml": "56c4e67f14d22ec878a1d6fb75084c431adbe5239a07e363adf47eb877e5f300",
+      ".governance/validate.py": "4d6f295ee5816d01134c52be6945d6e906e08054e1275423f0e209d04c6c89a5",
+      "AGENTS.md": "37639351a4a6457c8ab9ba2f96e684b1f3194adf1de014d0504f24fd41dbc55c"
+    },
+    "governed_workflows": [
+      "governance-validation.yml"
+    ],
+    "inventory_roots": [
+      ".ai",
+      ".agents/skills",
+      ".governance",
+      ".github/workflows"
+    ],
+    "required_markers": {
+      "authority": [
+        "GATE = DETERMINISTIC POLICY EVALUATION + ALLOW / DENY / REQUIRE_APPROVAL",
+        "AI RECOMMENDATION != GATE DECISION",
+        "Non-executable; approval triggers Gate re-evaluation"
+      ],
+      "disclosure": [
+        "This repository is **public**"
+      ],
+      "git_safety": [
+        "Protected operations",
+        "SAFE_TO_EDIT=NO"
+      ],
+      "identity": [
+        "| Repository | setvane-gate |",
+        "| Profile | gate |",
+        "canonical_governance_version: v1"
+      ],
+      "process": [
+        "MODE=REVIEW",
+        "MODE=IMPLEMENTATION",
+        "EXPECTED_WORKTREE",
+        "TASK_ID"
+      ],
+      "skills": [
+        "Skills define workflows within established authority. Skills do NOT grant permission."
+      ]
+    },
+    "required_references": [
+      "setvane-ecosystem-governance/profiles/gate.md",
+      "setvane-ecosystem-governance/contracts/policy-decision-contract.md",
+      "setvane-ecosystem-governance/.ai/governance/authorization.md",
+      "setvane-ecosystem-governance/docs/trust-model.md"
+    ]
+  },
+  "public_mode": true,
+  "repository": "setvane-gate",
+  "repository_slug": "JankoD84/setvane-gate",
+  "schema_version": "1.1",
+  "visibility": "public"
+}
